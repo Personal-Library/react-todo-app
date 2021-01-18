@@ -12,13 +12,32 @@ class TodoList extends Component {
         {id: 5, name: "study react"}
       ]
      }
+    this.handleDoubleClick = this.handleDoubleClick.bind(this)
   }
+
+  handleDoubleClick(event) {
+    event.preventDefault();
+    console.log(event.target.id)
+    console.log(this.state.info)
+    this.setState({
+      // item.id is a number but event.target.id is a string... LOL
+      info: this.state.info.filter(item => item.id.toString() !== event.target.id)
+    })
+  }
+
+
+
   render() { 
     return ( 
       <div className="list-info">
         <ul>
           {this.state.info.map((item)=>{
-            return (<li key={item.id}>{item.name}</li>)
+            return (<li 
+              key={item.id} 
+              id={item.id}
+              onDoubleClick={this.handleDoubleClick}>
+            {item.name}
+            </li>)
           })}
         </ul>
       </div>

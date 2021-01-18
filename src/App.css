@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #FFFBE6;
+  color: #356859;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navbar-container > li:hover {
+  border-bottom: 2px solid #37966F;
+}
+
+.navbar-container > li{
+  color: #fd5523;
+  font-size: 16px;
+  margin: 15px;
+  padding: 0 5px;
+  border-bottom: 2px solid #37966e36;
+}
+
+.navbar-container > li.nav-counter {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-container {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  width: 30vw;
+  height: 50vh;
+  background-color: #b9e4c9;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 3px 3px #37966e33;
+  color: #fd5523;
+}
+
+.card > h3 {
+  color: #fd5523;
+  text-align: center;
+  font-weight: 500;
+}
+
+.list-info > ul {
+  list-style: none;
+  color: black;
+}

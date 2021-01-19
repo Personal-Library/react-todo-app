@@ -11,7 +11,10 @@ body {
   background-color: #FFFBE6;
   color: #356859;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .navbar-container {
   width: 100%;
   display: flex;

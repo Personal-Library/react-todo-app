@@ -41,7 +41,7 @@ class TodoList extends Component {
 
   render() { 
     const newTask = this.state.newTask
-
+    
     return ( 
       <div className="list-info">
         <ul>

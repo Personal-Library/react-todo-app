@@ -4,16 +4,15 @@ import Clock from './Clock';
 class Navbar extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      activeTasks: 3
-     }
+    this.state = {}
   }
+
   render() { 
     return ( 
       <ul className="navbar-container">
-        <li>Home</li>
-        <li>Contact</li>
-        <li className="nav-counter">{this.state.activeTasks} Active Tasks</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Contact</a></li>
+        <li className="nav-counter">Task Manager</li>
         <li>Mode</li>
         <li><Clock /></li>
       </ul>

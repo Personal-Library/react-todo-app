@@ -21,6 +21,7 @@ body {
 
 .navbar-container > li:hover {
   border-bottom: 2px solid #37966F;
+  cursor: pointer;
 }
 
 .navbar-container > li{
@@ -38,7 +39,7 @@ body {
 
 .card-container {
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -46,7 +47,7 @@ body {
 
 .card {
   width: 30vw;
-  height: 50vh;
+  height: 70vh;
   background-color: #b9e4c9;
   border-radius: 20px;
   padding: 20px;
@@ -62,6 +63,28 @@ body {
 .card > h3:hover {
   background-color: #35685952;
 }
+.list-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.list-info > input {
+  margin-top: auto;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  border-radius: 5px;
+  height: 24px;
+  border: none;
+}
+.list-info > button {
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #FD5523;
+  color: white;
+  font-size: 16px;
+}
 
 .list-info > ul {
   list-style: none;
@@ -76,4 +99,33 @@ body {
 
 .list-info > ul > li:hover {
   background-color: #35685931;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .list-info {
+    font-size: 14px;
+  }
+  .navbar-container {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .navbar-container > li {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .navbar-container > li.nav-counter {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    order: 1;
+  }
+  .card-container {
+    flex-direction: column;
+    height: 200vh;
+  }
+  .card {
+    width: 90vw;
+    margin: 10px 0;
+  }
 }

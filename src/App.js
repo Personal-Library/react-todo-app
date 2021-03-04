@@ -25,7 +25,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div>
+			<React.Fragment>
 				<Navbar count={this.state.count} />
 				<div className='card-container'>
 					<div className='card'>
@@ -41,7 +41,7 @@ class App extends Component {
 						<TodoList incrementCount={this.incrementCount} decrementCount={this.decrementCount} />
 					</div>
 				</div>
-			</div>
+			</React.Fragment>
 		);
 	}
 }

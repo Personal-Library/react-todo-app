@@ -12,7 +12,9 @@ class Navbar extends Component {
 					<a href='/'>Contact</a>
 				</li>
 				<li className='nav-counter'>Task Manager {this.props.count}</li>
-				<li>Mode</li>
+				<li>
+					<a href='/'>Reset</a>
+				</li>
 				<li>
 					<Clock />
 				</li>

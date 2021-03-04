@@ -7,7 +7,6 @@ A simple web app that allows the user to create lists of todos.
 - HTML
 - CSS
 - React
-- Redux
 
 ## Installation
 

@@ -43,15 +43,15 @@ a {
 
 .card-container {
 	width: 100vw;
-	height: 90vh;
+	margin-top: 50px;
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .card {
 	width: 30vw;
-	height: 70vh;
+	height: auto;
 	background-color: #b9e4c9;
 	border-radius: 20px;
 	padding: 20px;
@@ -71,18 +71,25 @@ a {
 .list-info {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	justify-content: space-between;
+	min-height: 50vh;
 }
-.list-info > input {
+
+.list-info-controls {
 	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+}
+.list-info-controls > input {
+	margin-top: 20px;
 	margin-bottom: 5px;
 	padding-left: 5px;
 	border-radius: 5px;
 	height: 24px;
 	border: none;
 }
-.list-info > button {
-	margin-bottom: 25px;
+.list-info-controls > button {
+	/* margin-bottom: 25px; */
 	border-radius: 5px;
 	border: none;
 	cursor: pointer;

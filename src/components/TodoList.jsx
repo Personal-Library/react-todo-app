@@ -11,34 +11,33 @@ class TodoList extends Component {
 			],
 			newTask: '',
 		};
-		this.handleDoubleClick = this.handleDoubleClick.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-		this.handleChange = this.handleChange.bind(this);
 	}
 
-	handleDoubleClick(event) {
-		event.preventDefault();
-		this.setState({
-			info: this.state.info.filter((item) => item.id.toString() !== event.target.id),
-		});
-	}
-
-	handleSubmit(event) {
-		event.preventDefault();
-		this.setState({
-			info: [
-				{ id: Math.floor(Math.random() * 10000000), name: this.state.newTask },
-				...this.state.info,
-			],
-			newTask: '',
-		});
-	}
-
-	handleChange(event) {
+	handleChange = (event) => {
 		this.setState({
 			newTask: event.target.value,
 		});
-	}
+	};
+
+	handleDoubleClick = (event) => {
+		this.setState({
+			info: this.state.info.filter((item) => item.id.toString() !== event.target.id),
+		});
+    this.props.decrementCount();
+	};
+
+	handleSubmit = () => {
+		if (this.state.newTask) {
+			this.setState({
+				info: [
+					{ id: Math.floor(Math.random() * 10000000), name: this.state.newTask },
+					...this.state.info,
+				],
+				newTask: '',
+			});
+      this.props.incrementCount();
+		}
+	};
 
 	render() {
 		const newTask = this.state.newTask;
@@ -54,13 +53,16 @@ class TodoList extends Component {
 						);
 					})}
 				</ul>
+        <div className='list-info-controls'>
 				<input
 					type='text'
 					value={newTask}
 					placeholder='Enter task...'
 					onChange={this.handleChange}
+					onKeyPress={(e) => (e.key === 'Enter' ? this.handleSubmit() : null)}
 				/>
 				<button onClick={this.handleSubmit}>Add</button>
+        </div>
 			</div>
 		);
 	}

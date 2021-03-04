@@ -7,19 +7,21 @@ A simple web app that allows the user to create lists of todos.
 - HTML
 - CSS
 - React
+- Redux
 
 ## Installation
-Create a project directory
 
-`mkdir project-name`
+Enter your project directory
 
-Enter the project directory
-
-`cd project-name`
+`cd project-directory`
 
 Clone the repository
 
 `git clone https://github.com/Personal-Library/react-todo-app.git`
+
+Move into the created directory
+
+`cd react-todo-app`
 
 Install dependencies
 
